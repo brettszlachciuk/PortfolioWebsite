@@ -2,7 +2,7 @@ import { ProjectCard } from "../components/ProjectCard";
 export default function Projects() {
   return (
     <div className="bg-gradient-to-b from-gray-200 to-gray-100">
-      <ul className="space-y-16">
+      <ul className="flex flex-col items-center w-full space-y-16">
         <li className="mr-auto ml-auto">
           <ProjectCard
             projectTitle="Politician Database Application"
