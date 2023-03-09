@@ -3,7 +3,6 @@ import {
   MenuHandler,
   MenuList,
   MenuItem,
-  Button,
 } from "@material-tailwind/react";
 import { FiMenu } from "react-icons/fi";
 import Link from "next/link";
@@ -17,9 +16,12 @@ export default function MenuComponent() {
       }}
     >
       <MenuHandler>
-        <FiMenu size={40} />
+        <FiMenu size={40} className="ml-4" />
       </MenuHandler>
       <MenuList className="mt-20 ml-10 bg-gray-300/80">
+        <Link href="/">
+          <MenuItem className="text-gray-900">Home</MenuItem>
+        </Link>
         <Link href="/projects">
           <MenuItem className="text-gray-900">Projects</MenuItem>
         </Link>
