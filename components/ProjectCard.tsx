@@ -19,7 +19,7 @@ export function ProjectCard(props: {
   return (
     <Card
       shadow={false}
-      className="relative grid h-[30rem] max-w-[21rem]  items-end justify-center overflow-hidden text-center hover:animate-wiggle"
+      className="relative grid h-[30rem] min-w-max  items-end justify-center overflow-hidden text-center hover:animate-wiggle"
     >
       <CardHeader
         floated={false}
