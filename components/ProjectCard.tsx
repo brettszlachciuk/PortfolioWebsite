@@ -4,6 +4,7 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
+import Image from "next/image";
 
 export function ProjectCard(props: {
   projectTitle: string;
@@ -19,15 +20,15 @@ export function ProjectCard(props: {
   return (
     <Card
       shadow={false}
-      className="relative grid h-[30rem] min-w-max  items-end justify-center overflow-hidden text-center hover:animate-wiggle"
+      className="relative grid h-[30rem] w-3/5 items-end justify-center overflow-hidden text-center hover:"
     >
       <CardHeader
         floated={false}
         shadow={false}
         color="transparent"
-        className={`absolute inset-0 m-0 h-full w-full rounded-none bg-[${imgUrl}] bg-cover bg-center`}
+        className={`absolute inset-0 m-0 h-full w-full rounded-none  bg-cover bg-center`}
       >
-        <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-pink-500/100 via-purple-100/80" />
+        <Image src="../public/vercel.svg" height="500" width="500" alt="pic" />
       </CardHeader>
       <CardBody className="relative py-14 px-6 md:px-12">
         <Typography
