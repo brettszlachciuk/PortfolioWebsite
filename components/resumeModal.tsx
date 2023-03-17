@@ -19,7 +19,7 @@ export default function ResumeModal() {
           >
             Close
           </button>
-          <iframe src={"../Resume_Brett.pdf"} width={900} height={900} />
+          <iframe src={"../Resume_Brett.pdf"} width="66%" height="100%" />
         </div>
       ) : null}
     </>

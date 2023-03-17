@@ -5,32 +5,23 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import { GoMarkGithub } from "react-icons/go";
 
 export function ProjectCard(props: {
   projectTitle: string;
   technologies: string;
-  imgSrc?: string;
+  imgSrc: string;
+  gitHubSrc: string;
 }) {
-  let imgUrl: string = "";
-
-  if (props.imgSrc === "politician") {
-    imgUrl = "url('/public/vercel.svg')";
-  }
-
   return (
     <Card
       shadow={false}
-      className="relative grid h-[30rem] w-3/5 items-end justify-center overflow-hidden text-center hover:"
+      className="bg-gradient-to-br  from-pink-500 to-purple-500/50 relative grid h-[30rem] w-3/5 items-end justify-center overflow-hidden text-center hover:-translate-y-0.5"
     >
-      <CardHeader
-        floated={false}
-        shadow={false}
-        color="transparent"
-        className={`absolute inset-0 m-0 h-full w-full rounded-none  bg-cover bg-center`}
-      >
-        <Image src="../public/vercel.svg" height="500" width="500" alt="pic" />
+      <CardHeader floated={false} className="h-80">
+        <Image src={props.imgSrc} height="500" width="800" alt="pic" />
       </CardHeader>
-      <CardBody className="relative py-14 px-6 md:px-12">
+      <CardBody className="relative">
         <Typography
           variant="h2"
           color="black"
@@ -40,8 +31,14 @@ export function ProjectCard(props: {
         </Typography>
         <Typography variant="h5" className="mb-4 text-gray-800">
           {props.technologies}
+          <a href={props.gitHubSrc} target="_blank" rel="noreferrer noopener">
+            <GoMarkGithub color="black" opacity={0.7} size={20}></GoMarkGithub>
+          </a>
         </Typography>
       </CardBody>
+      <a href={props.gitHubSrc} target="_blank" rel="noreferrer noopener">
+        <GoMarkGithub color="black" opacity={0.7} size={20}></GoMarkGithub>
+      </a>
     </Card>
   );
 }

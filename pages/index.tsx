@@ -8,7 +8,7 @@ export default function Home() {
         <section className="min-h-full">
           <div className="flex flex-col text-center text-blue-gray-900 mb-8 w-1/2 ml-auto mr-auto">
             <div className="text-4xl font-extrabold min-w-lg">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 min-w-">
+              <span className="bg-clip-text text-transparent bg-gradient-to-br from-pink-500 to-purple-500 min-w-">
                 Brett Szlachciuk
               </span>
             </div>
